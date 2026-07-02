@@ -5,7 +5,6 @@ const app = express();
 
 app.use(cors());
 
-// Hardcoded course data
 const courses = [
   {
     id: "1",
@@ -14,15 +13,21 @@ const courses = [
       { id: "l1", title: "Introduction" },
       { id: "l2", title: "Hazards" }
     ]
+  },
+  {
+    id: "2",
+    title: "Customer Service",
+    lessons: [
+      { id: "l1", title: "Greeting Customers" },
+      { id: "l2", title: "Handling Complaints" }
+    ]
   }
 ];
 
-// GET all courses
 app.get("/api/courses", (req, res) => {
   res.json(courses);
 });
 
-// GET single course by id
 app.get("/api/courses/:id", (req, res) => {
   const course = courses.find(c => c.id === req.params.id);
 
@@ -33,6 +38,8 @@ app.get("/api/courses/:id", (req, res) => {
   res.json(course);
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+const PORT = 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
