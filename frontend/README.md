@@ -1,5 +1,21 @@
 # LMS Mini App
 
+A simple Learning Management System (LMS) mini application built with React, Vite, Node.js, and Express.
+
+## Features
+
+- View a list of courses
+- View lessons for each course
+- Mark lessons as completed (UI only)
+- Simple and responsive interface
+
+## Tech Stack
+
+- React
+- Vite
+- Node.js
+- Express
+
 ## Installation
 
 ### Backend
@@ -7,16 +23,8 @@
 ```bash
 cd backend
 npm install
-npm start
+node server.js
 ```
-
-Runs on:
-
-```
-http://localhost:5000
-```
-
----
 
 ### Frontend
 
@@ -26,18 +34,12 @@ npm install
 npm run dev
 ```
 
-Runs on:
+## API Endpoints
 
-```
-http://localhost:5173
-```
+GET /api/courses
 
----
+GET /api/courses/:id
 
-## Features
+## Author
 
-- View all courses
-- View course lessons
-- Mark lessons completed (UI only)
-- React + Vite frontend
-- Node + Express backend
+Cherry Ann Louis

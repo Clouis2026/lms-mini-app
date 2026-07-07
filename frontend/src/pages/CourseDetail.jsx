@@ -23,7 +23,7 @@ function CourseDetail() {
   }
 
   if (!course) {
-    return <h2>Loading...</h2>;
+    return <p>Loading...</p>;
   }
 
   return (

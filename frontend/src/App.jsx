@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import CourseDetail from "./pages/CourseDetail";
 
 function Home() {
   const [courses, setCourses] = useState([]);
@@ -26,18 +27,10 @@ function Home() {
           }}
         >
           <h3>{course.title}</h3>
+
           <Link to={`/course/${course.id}`}>View Course</Link>
         </div>
       ))}
-    </div>
-  );
-}
-
-function CourseDetail() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>Course Detail Page</h1>
-      <Link to="/">← Back</Link>
     </div>
   );
 }
